@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usluge | Glazbeni kutak</title>
+    <title>Glazbeni kutak - Usluge</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
-    <header class="sticky top-0 bg-white border-b border-gray-200">
-        <div class="max-w-5xl mx-auto px-4 flex items-center justify-between">
-            <a href="index.html" class="text-xl font-bold text-teal-700">Glazbeni kutak</a>
+    <header class="sticky top-0 bg-white border-b border-gray-200 z-10">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold text-teal-700 hover:text-teal-800">Glazbeni kutak</a>
             <nav class="hidden md:flex gap-6">
                 <a href="index.html" class="hover:text-teal-700">Naslovnica</a>
-                <a href="usluge.html" class="hover:text-teal-700">Usluge</a>
+                <a href="usluge.html" class="font-semibold text-teal-700 hover:text-teal-900">Usluge</a>
                 <a href="kontakt.html" class="hover:text-teal-700">Kontakt</a>
             </nav>
         </div>
@@ -24,43 +24,43 @@
     <nav class="md:hidden bg-white border-b border-gray-200">
         <div class="flex justify-around py-2 text-sm">
             <a href="index.html" class="hover:text-teal-700">Naslovnica</a>
-            <a href="usluge.html" class="hover:text-teal-700">Usluge</a>
+            <a href="usluge.html" class="font-semibold text-teal-700">Usluge</a>
             <a href="kontakt.html" class="hover:text-teal-700">Kontakt</a>
         </div>
     </nav>
 
-    <section class="max-w-2xl mx-auto px-4 py-12">
-        <h1 class="text-2xl font-bold mb-6">Rezervacija usluge ili ploče</h1>
+    <main class="flex-grow">
+        <section class="max-w-5xl mx-auto px-4 py-12">
+            <h1 class="text-3xl font-bold mb-8">Detaljan pregled usluga</h1>
 
-        <form class="flex flex-col gap-4">
-
-            <div class="flex flex-col md:flex-row gap-4">
-
-                <div class="flex flex-col gap-1 w-full">
-                    <label for="name" class="text-sm font-medium">Ime i prezime</label>
-                    <input type="text" id="name" name="name"
-                        class="border border-gray-300 rounded-md px-3 py-2 focus:border-teal-600 focus:outline-none">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white p-6 border border-gray-200 rounded-lg">
+                    <h2 class="text-xl font-bold text-teal-700 mb-2">Prodaja i nabava vinila</h2>
+                    <p class="text-gray-600 mb-4">
+                        Specijalizirani smo za izdanja heavy metala, thrash metala i klasičnog rocka. 
+                        Nudimo i uslugu narudžbe rijetkih kolekcionarskih LP izdanja direktno iz inozemstva.
+                    </p>
                 </div>
 
-                <div class="flex flex-col gap-1 w-full">
-                    <label for="email" class="text-sm font-medium">E-mail adresa</label>
-                    <input type="email" id="email" name="email"
-                        class="border border-gray-300 rounded-md px-3 py-2 focus:border-teal-600 focus:outline-none">
+                <div class="bg-white p-6 border border-gray-200 rounded-lg">
+                    <h2 class="text-xl font-bold text-teal-700 mb-2">Servis i restauracija gramofona</h2>
+                    <p class="text-gray-600 mb-4">
+                        Vraćamo u život stare gramofone. Vršimo izmjenu remena, podešavanje težine igle, 
+                        čišćenje elektronike i zamjenu zvučnica za najbolji mogući zvuk.
+                    </p>
                 </div>
-
             </div>
 
-            <div class="flex flex-col gap-1">
-                <label for="message" class="text-sm font-medium">Koja usluga ili ploča te zanima</label>
-                <textarea id="message" name="message" rows="4"
-                    class="border border-gray-300 rounded-md px-3 py-2 focus:border-teal-600 focus:outline-none"></textarea>
+            <!-- Kartica s pozivom na akciju preusmjerava na kontakt.html -->
+            <div class="bg-teal-50 border border-teal-200 p-6 rounded-lg text-center">
+                <h3 class="text-xl font-semibold text-teal-900 mb-2">Trebate specifičnu uslugu ili ploču?</h3>
+                <p class="text-teal-700 mb-4">Pošaljite nam upit putem kontakt obrasca i odgovorit ćemo vam u roku 24 sata.</p>
+                <a href="kontakt.html" class="inline-block bg-teal-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-teal-800 transition-colors">
+                    Pošalji upit
+                </a>
             </div>
-
-            <button type="submit"
-                class="bg-teal-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-teal-800">Pošalji upit</button>
-
-        </form>
-    </section>
+        </section>
+    </main>
 
     <footer class="bg-gray-800 text-gray-300">
         <div class="max-w-5xl mx-auto px-4 py-8 flex flex-col md:flex-row justify-between gap-4 text-sm">
